@@ -1,0 +1,129 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --color-texto-menu: #317582;
+    --color-texto-main: #DFF7FF;
+}
+
+html, body{
+    margin: 0;
+    height: 100%;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+    font-family: 'Sans-serif';
+}
+
+
+header nav{
+    display: flex;
+    color: var(--color-texto-menu);
+    flex-direction: row;
+    background-color: #F7F8FA;
+    justify-content: space-between;
+    min-height: 80px;
+    align-items: center;
+    padding: 20px 35px; /* espacio interno */
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-inline: 20px;
+}
+
+
+.imagen-fondo{
+    background-image: linear-gradient(rgba(0, 94, 114, 0.9), rgba(0, 94, 114, 0.9)), url("img/imagenFondo.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 80vh;
+    color: var(--color-texto-main);
+}
+
+.botones{
+    display: flex;
+}
+
+.botones>button{
+    height: 64px;
+    width: 200px;
+    border-color: #EE9B00;
+    color: #EE9B00;
+    background-color: transparent;
+    margin-inline: 8px;
+}
+
+.botones>button:hover{
+    background-color: #EE9B00;
+    color: rgb(0, 94, 114);
+}
+
+.fondo{
+    background-color: #EAD8A4;
+    position: absolute;
+    z-index: 1; /* menor que la imagen */
+    width: 500px;
+    height: 350px;
+    border-radius: 5px;
+    bottom: 22%; /* mejor usar bottom en vez de margin-bottom */
+    left: 1040px; /* mejor usar left en vez de margin-left */
+}
+.texto{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: fit-content;
+    padding-top: 150px;
+    padding-left: 520px;
+    font-size: 25px;
+}
+
+.texto>p{
+    font-size: smaller;
+    margin-top: -10px;
+}
+.imagen-derecha{
+    position: absolute; /* para posicionarla encima del fondo */
+    z-index: 2;
+    bottom: 21.9%;
+    left: 970px; 
+}
+
+.imagen-derecha img{
+    width: 520px;
+    height: 340px;
+    border-radius: 5px;
+}
+
+.servicios{
+    display: flex;
+    flex-direction: column;
+    background-color: #F7F8FA;
+    text-align: center;
+}
+
+.servicios h2{
+    border-bottom: 3px solid red;
+    width: fit-content;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tarjeta > .cabecera{
+    background-color: #005E72;
+}
